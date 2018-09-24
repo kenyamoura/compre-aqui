@@ -121,7 +121,7 @@ public class ClienteControlador {
      * PUT /clientes/{email}
      */
     @PutMapping("/{email}")
-    public ResponseEntity<Cliente> apagar(@PathVariable String email, @RequestBody @Valid Cliente cliente) {
+    public ResponseEntity<Cliente> atualizar(@PathVariable String email, @RequestBody @Valid Cliente cliente) {
         // Se existir no banco, salva
         boolean existe = repositorio.existsById(email);
         if (existe) {
